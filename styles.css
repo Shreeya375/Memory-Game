@@ -41,14 +41,45 @@ h2{
     cursor: pointer;
     font-weight: 600;
 }
-.reset:focus{
+.reset:focus {
     color: #267c65;
     background: #fff;
 }
-.game{
-    width: 400px;
-    height: 400px; 
+.game {
+    width: 430px;
+    height: 430px; 
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.itemboxOpen{
+    transform: rotateY(0deg);
+}
+.item:after{
+    content: '';
+    position: absolute;
+    inline-size: none;
+    inset: 0;
+    background-color: #8e81e6;
+    /* opacity: 0.85; */
+    transition: 0.25s;
+    transform: rotateY(0deg);
+}
+
+.boxOpen:after
+{
+    transform: rotateY(180deg);
 }
