@@ -30,16 +30,24 @@
       setTimeout(function () {
                 let openCards = document.querySelectorAll('.boxOpen');
                 
-          if (document.querySelectorAll('.boxOpen').length > 1) {
-            if (
-              document.querySelectorAll('.boxOpen')[0].innerHTML ==
-              document.querySelectorAll('.boxOpen')[1].innerHTML
-            ) {
-              document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch');
-              document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch');
-            }
-          }
-        }, 500);
+         if (openCards.length > 1) {
+                    if (openCards[0].innerHTML == openCards[1].innerHTML) {
+                        // ifthey match, mark as match and remove the open status
+                          openCards[0].classList.add('boxMatch');
+                          openCards[1].classList.add('boxMatch');
+                          openCards[1].classList.remove('boxOpen');
+                          openCards[0].classList.remove('boxOpen');
+                      // Check if it is a win
+                        if (document.querySelectorAll('.boxMatch').length == emojis.length) {
+                            alert("Win!");
+                        }
+                    } else {
+                        // If they don't match, flip the cards back over
+                          openCards[1].classList.remove('boxOpen');
+                          openCards[0].classList.remove('boxOpen');
+                    }
+                }
+            }, 500);
       };
             document.querySelector('.game').appendChild(box);
           }
