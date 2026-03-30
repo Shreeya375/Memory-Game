@@ -24,3 +24,8 @@ for (let i = 0; i < emojis.length; i++) {
                             openCards[1].classList.remove('boxOpen');
                         }
                     }, 500);
+   }
+        }
+    };
+    gameContainer.appendChild(box);
+}
