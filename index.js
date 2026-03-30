@@ -16,3 +16,11 @@ for (let i = 0; i < emojis.length; i++) {
                         openCards[1].classList.add('boxMatch');
                         openCards[0].classList.remove('boxOpen');
                         openCards[1].classList.remove('boxOpen');
+                     if (document.querySelectorAll('.boxMatch').length === emojis.length) {
+                            alert("Win!");
+                            }
+                        } else {
+                            openCards[0].classList.remove('boxOpen');
+                            openCards[1].classList.remove('boxOpen');
+                        }
+                    }, 500);
