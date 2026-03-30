@@ -26,7 +26,7 @@ body
 }
 h2{
     font-size: 3em;
-    color: #fff;
+    color: #267c65;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -61,38 +61,27 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    transform: rotateY(180deg);
+    background: #267c65;
+    font-size: 0px;
+    cursor: pointer;
+    transform: rotateY(0deg);
     transition: 0.25s;
 }
-.boxOpen{
-    transform: rotateY(0deg);
-}
-.item:after{
+.item::after{
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #8e81e6;
-    /* opacity: 0.85; */
-    transition: 0.25s;
+    background-color: #267c65;
     transform: rotateY(0deg);
-  backface-visibility: hidden;
-
+    backface-visibility: hidden; /* hides the green when it flips */
+    transition: 0.25s;
 }
-
-.boxOpen:after
-{
+.item.boxOpen,
+.item.boxMatch {
     transform: rotateY(180deg);
+    font-size: 50px;     /* reveal emoji */
 }
     
-.item {
-    font-size: 2.5em; /* Make emojis bigger */
-    user-select: none; /* Prevent highlighting text on click */
-}
-
-/* removes the purple cover when matched */
-.boxMatch {
-    transform: rotateY(0deg);
-    opacity: 0; 
-    pointer-events: none;
+.item.boxMatch {
+ background: #9ed9c9;
 }
