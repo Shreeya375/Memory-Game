@@ -26,7 +26,18 @@ allowing me to focus on mechanics and enhance user experience through logic, cre
 
 Languages:
 
-Html - serves as the structural skeleton, defining the game board layout, the card containers, and user interface elements like the restart button.
+HTML - serves as the structural skeleton, defining the game board layout, the card containers, and user interface elements like the restart button.
 CSS - responsible for the entire visual presentation, including the design of the cards, the layout of the game board, and the animation of the cards flipping. 
 JS - was important  for handling the game's core logic and interaction with the user. 
 
+Challenges: 
+
+A few challenges I faced when coding this was trying to debug it and not knowing which part was wrong. Especially when it came to the 3D flip animation and making sure the "back" of the card actually stayed hidden. When I was coding I knew that I was doing the process correctly but didn't know that my code was overriding and for example the html had javascript code in it, etc. 
+
+
+
+What I learned:
+
+- How to be patient and debug code 
+- Even though the code may be correct, misplacing it in the wrong file and repeating certain sections can result in the code not working. 
+- I became better at game design and creating a game format that is interactive with the player and is fun! :) 
