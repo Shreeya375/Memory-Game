@@ -61,18 +61,17 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #267c65;
+    background: #fff;
     font-size: 0px;
-    cursor: pointer;
+    cursor: pointer
+    transition: 0.25s;;
     transform: rotateY(0deg);
-    transition: 0.25s;
 }
 .item::after{
     content: '';
     position: absolute;
     inset: 0;
     background-color: #267c65;
-    transform: rotateY(0deg);
     backface-visibility: hidden; /* hides the green when it flips */
     transition: 0.25s;
 }
@@ -83,5 +82,5 @@ h2{
 }
     
 .item.boxMatch {
- background: #9ed9c9;
+ background: #d3f6ed;
 }
