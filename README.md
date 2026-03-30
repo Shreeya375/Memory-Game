@@ -20,3 +20,13 @@ Resetting:
 
 Click the "Reset Game" button to shuffle the emojis and start a brand new round. 
 
+Why I Created This Project:
+I created this project to deepen my understanding of game development and player interaction by building a familiar game, 
+allowing me to focus on mechanics and enhance user experience through logic, creativity, and interaction.
+
+Languages:
+
+Html - serves as the structural skeleton, defining the game board layout, the card containers, and user interface elements like the restart button.
+CSS - responsible for the entire visual presentation, including the design of the cards, the layout of the game board, and the animation of the cards flipping. 
+JS - was important  for handling the game's core logic and interaction with the user. 
+
