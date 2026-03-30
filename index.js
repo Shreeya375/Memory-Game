@@ -7,3 +7,6 @@ for (let i = 0; i < emojis.length; i++) {
     box.onclick = function () {
         if (document.querySelectorAll('.boxOpen').length < 2 && !this.classList.contains('boxOpen') && !this.classList.contains('boxMatch')) {
             this.classList.add('boxOpen');
+if (document.querySelectorAll('.boxOpen').length === 2) {
+                setTimeout(function () {
+                    let openCards = document.querySelectorAll('.boxOpen');
