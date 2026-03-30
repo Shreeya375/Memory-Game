@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+    <html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Play the Memory Game! | JavaScript</title>
-
+    <title>Play the Memory Game! </title>
     <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
     <div class="container">
         <h2>Memory Game</h2>
@@ -14,54 +13,6 @@
         <button class="reset" onclick="window.location.reload();">Reset Game</button>
     </div>
 
-   <script src="index.js"></script>
-</body>
-</html>
-        const emojis = ["😍","😍","💖","💖","🫐","🫐","🏏","🏏","🥹","🥹","😭","😭","☀️","☀️","💙","💙"];
-        // Shuffle the array
-        let shuf_emojis = emojis.sort(() => (Math.random() > 0.5 ? 1 : -1));
-        
-        const gameContainer = document.querySelector('.game');
-
-        for (let i = 0; i < emojis.length; i++) {
-            let box = document.createElement('div');
-            box.className = 'item';
-            box.innerHTML = shuf_emojis[i];
-
-            box.onclick = function () {
-                // Only allow click if fewer than 2 cards are open
-                // Prevent clicking the same card twice or clicking a matched card
-                if (document.querySelectorAll('.boxOpen').length < 2 && !this.classList.contains('boxOpen') && !this.classList.contains('boxMatch')) {
-                    
-                    this.classList.add('boxOpen');
-
-                    // Only run match logic if 2 cards are openeed
-                    if (document.querySelectorAll('.boxOpen').length === 2) {
-                        setTimeout(function () {
-                            let openCards = document.querySelectorAll('.boxOpen');
-                            
-                            if (openCards[0].innerHTML === openCards[1].innerHTML) {
-                                // Match found
-                                openCards[0].classList.add('boxMatch');
-                                openCards[1].classList.add('boxMatch');
-                                openCards[0].classList.remove('boxOpen');
-                                openCards[1].classList.remove('boxOpen');
-
-                                // Check if there is a win
-                                if (document.querySelectorAll('.boxMatch').length === emojis.length) {
-                                    alert("Win!");
-                                }
-                            } else {
-                                // no match then flip the cards back
-                                openCards[0].classList.remove('boxOpen');
-                                openCards[1].classList.remove('boxOpen');
-                            }
-                        }, 500);
-                    }
-                }
-            };
-            gameContainer.appendChild(box);
-        }
-    </script>
-    </body>
+        <script src="index.js"></script>
+        </body>
 </html>
