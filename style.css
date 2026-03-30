@@ -32,27 +32,23 @@ h2{
 }
 .reset{
     padding: 15px 20px;
-    color: #267c65;
-    background: #fff;
+    color: #fff;
+    background: #267c65;
     border: none;
-    font-size: 1.5em;
-    letter-spacing: 01em;
-    text-transform: uppercase;
+    font-size: 1.2em;
     cursor: pointer;
     font-weight: 600;
 }
-.reset:focus {
-    color: #267c65;
-    background: #fff;
+.reset:hover {
+    background: #1e5f4d;
 }
 .game {
     width: 430px;
     height: 430px; 
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    transform-style: preserve-3d;
-    perspective: 500px;
+    gap: 10px; /* makes the flip look 3D! */
+    perspective: 1000px;
 }
 .item {
     position: relative;
@@ -64,7 +60,8 @@ h2{
     background: #fff;
     font-size: 0px;
     cursor: pointer
-    transition: 0.25s;;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
     transform: rotateY(0deg);
 }
 .item::after{
