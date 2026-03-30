@@ -59,7 +59,7 @@ h2{
     align-items: center;
     background: #fff;
     font-size: 0px;
-    cursor: pointer
+    cursor: pointer;
     transition: transform 0.5s;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
