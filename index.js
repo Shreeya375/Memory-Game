@@ -1,3 +1,8 @@
+const emojis = ["😍","😍","💖","💖","🫐","🫐","🏏","🏏","🥹","🥹","😭","😭","☀️","☀️","💙","💙"];
+let shuf_emojis = emojis.sort(() => (Math.random() > 0.5 ? 1 : -1));
+
+const gameContainer = document.querySelector('.game');
+
 for (let i = 0; i < emojis.length; i++) {
     let box = document.createElement('div');
     box.className = 'item';
@@ -24,7 +29,7 @@ for (let i = 0; i < emojis.length; i++) {
                             openCards[1].classList.remove('boxOpen');
                         }
                     }, 500);
-   }
+               }
         }
     };
     gameContainer.appendChild(box);
